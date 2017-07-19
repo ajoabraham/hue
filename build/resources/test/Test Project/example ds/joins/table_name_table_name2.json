@@ -1,0 +1,9 @@
+{
+  "sql" : "t.col1 = t2.col1_t2",
+  "leftTable" : "schema_name.table_name",
+  "rightTable" : "schema_name2.table_name2",
+  "cost" : 1000,
+  "allowRollDown" : 1000,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}
