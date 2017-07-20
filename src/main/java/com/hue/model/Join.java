@@ -1,5 +1,7 @@
 package com.hue.model;
 
+import java.io.File;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hue.common.CardinalityType;
@@ -18,14 +20,19 @@ public class Join{
 	private int allowRollDown = -1;
 	private String leftTableName = null;
 	private String rightTableName = null;
+	
+	@JsonIgnore
+	private Datasource ds;
+	@JsonIgnore
+	private File file;
 
 	public Join(IJoinable left, IJoinable right, String sql, JoinType type) {
 		this.left = left;
 		this.right = right;
 		setSql(sql);
 		setJoinType(type);
-		this.leftTableName = left == null ? null : left.getName();
-		this.rightTableName = right == null ? null : right.getName();
+		this.leftTableName = left == null ? null : String.join(".", getLeft().getPhysicalNameSegments());
+		this.rightTableName = right == null ? null : String.join(".", getRight().getPhysicalNameSegments());
 	}
 
 	public Join() {
@@ -34,7 +41,24 @@ public class Join{
 
     @JsonIgnore
     public String getName() {
-        return String.format("%s_%s_%s", getLeft().getName(), joinType.name(), getRight().getName());
+        return String.format("%s_%s_%s", String.join(".", getLeft().getPhysicalNameSegments()), joinType.name(), 
+        		String.join(".", getRight().getPhysicalNameSegments()));
+    }
+    
+	public File getFile() {
+		return file;
+	}
+	
+	public void setFile(File file) {
+		this.file = file;
+	}
+    
+    public Datasource getDatasource() {
+    		return ds;
+    }
+    
+    public void setDatasource(Datasource ds) {
+    		this.ds = ds;
     }
 
 	public IJoinable getLeft() {
@@ -92,7 +116,8 @@ public class Join{
 	}
 
 	public void setJoinType(JoinType joinType) {
-		this.joinType = joinType;
+		if(joinType != null)
+			this.joinType = joinType;
 	}
 
 	public int getAllowRollDown() {

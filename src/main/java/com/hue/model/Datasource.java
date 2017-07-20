@@ -1,11 +1,9 @@
 package com.hue.model;
 
-import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.google.common.collect.Lists;
 import com.hue.common.DBType;
 import com.hue.utils.SecurityUtils;
 
@@ -46,18 +44,7 @@ public class Datasource extends HueBase {
 	@JsonIgnore
 	private int sshLocalPort = -1;
 
-	@JsonIgnore
-	private List<Table> tables = Lists.newArrayList();
-
 	public Datasource() {
-	}
-
-	public List<Table> getTables() {
-		return tables;
-	}
-
-	public void setTables(List<Table> tables) {
-		this.tables = tables;
 	}
 
 	public String getDatabaseName() {

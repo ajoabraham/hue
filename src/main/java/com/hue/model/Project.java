@@ -10,7 +10,7 @@ public class Project {
 	private String name;
 	
 	@JsonIgnore
-	private File projectDirectory;
+	private File file;
 	
 	private int maxReportExecutionTime = 1800;
 	private int maxResultRows = 100000;
@@ -42,10 +42,14 @@ public class Project {
 	 * 
 	 * @return the directory location of this project
 	 */
-	public File getProjectDirectory() {
-		return projectDirectory;
+	public File getFile() {
+		return file;
 	}
-
+	
+	public void setFile(File file) {
+		this.file = file;
+	}
+	
 	/**
 	 * Total report execution time in seconds. -1
 	 * and 0 indicate no limit.

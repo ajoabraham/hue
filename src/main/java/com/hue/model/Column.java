@@ -8,7 +8,7 @@ import com.hue.common.DataType;
 public class Column extends HueBase {
 	private static final long serialVersionUID = 1L;
 
-	private DataType dataType = DataType.STRING ;
+	private DataType dataType = DataType.TEXT ;
 	private ColumnKeyType keyType = ColumnKeyType.NO_KEY_TYPE;
 
 	public Column() {

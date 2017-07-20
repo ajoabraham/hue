@@ -1,0 +1,9 @@
+{
+  "sql" : "load_jobs.user_id = users.id",
+  "leftTableName" : "load_jobs",
+  "rightTableName" : "users",
+  "cost" : 10000,
+  "allowRollDown" : -1,
+  "cardinalityType" : "MANY_TO_ONE",
+  "joinType" : "INNER_JOIN"
+}

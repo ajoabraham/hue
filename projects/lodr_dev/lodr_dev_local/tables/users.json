@@ -1,0 +1,29 @@
+{
+  "name" : "users",
+  "desc" : null,
+  "schemaName" : null,
+  "physicalName" : "users",
+  "rowCount" : 1000,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "email",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "first_name",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  },{
+    "name" : "last_name",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

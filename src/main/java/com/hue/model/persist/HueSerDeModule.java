@@ -10,7 +10,9 @@ public class HueSerDeModule extends SimpleModule {
 
 	  public HueSerDeModule() {
 	    super(NAME);
-	    addSerializer(FieldExpression.class, new FieldExpressionSer());
-	    addSerializer(Join.class, new JoinSer());
+	    addSerializer(FieldExpression.class, new FieldExpSerDe.FieldExpSer());
+	    addSerializer(Join.class, new JoinSerDe.JoinSer());
+	    addDeserializer(Join.class, new JoinSerDe.JoinDeSer());
+	    addDeserializer(FieldExpression.class, new FieldExpSerDe.FieldExpDeSer());
 	  }
 	}

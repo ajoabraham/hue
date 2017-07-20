@@ -1,0 +1,29 @@
+{
+  "name" : "load_jobs",
+  "desc" : null,
+  "schemaName" : null,
+  "physicalName" : "load_jobs",
+  "rowCount" : 10000,
+  "tableType" : "FACT",
+  "columns" : [ {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "loader_name",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "execution_errors",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  },{
+    "name" : "info",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

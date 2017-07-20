@@ -79,6 +79,17 @@ public class Schema {
 		return tables.stream().filter(d -> d.getName().equalsIgnoreCase(name)).findFirst();
 	}
 	
+	public Optional<Table> getTable(Datasource ds, String tableName, String schemaName) {
+		Set<Table> tables = dsTables.get(ds);
+		
+		if(tables == null) return Optional.empty();
+		
+		return tables.stream()
+				.filter(d -> d.getName().equalsIgnoreCase(tableName) && 
+						d.getSchemaName().equalsIgnoreCase(schemaName))
+				.findFirst();
+	}
+	
 	public void addTable(Datasource ds, Table t) {
 		addDatasource(ds);
 		t.setDatasource(ds);
@@ -94,6 +105,7 @@ public class Schema {
 	
 	public void addJoin(Datasource ds, Join j) {
 		addDatasource(ds);
+		j.setDatasource(ds);
 		
 		if( getTable(ds, j.getLeftTableName()).isPresent() &&
 				getTable(ds,j.getRightTableName()).isPresent()){

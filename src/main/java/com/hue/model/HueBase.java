@@ -1,5 +1,6 @@
 package com.hue.model;
 
+import java.io.File;
 import java.io.Serializable;
 
 import org.slf4j.Logger;
@@ -17,6 +18,8 @@ public class HueBase implements Serializable {
 	private String desc;
 	@JsonIgnore
 	private Project project;
+	@JsonIgnore
+	private File file;
 	
 	public String getName() {
 		return name;
@@ -25,6 +28,14 @@ public class HueBase implements Serializable {
 	public void setName(String name) {
 		if(name != null)
 			this.name = name.trim();
+	}
+	
+	public File getFile() {
+		return file;
+	}
+	
+	public void setFile(File file) {
+		this.file = file;
 	}
 	
 	public Project getProject() {

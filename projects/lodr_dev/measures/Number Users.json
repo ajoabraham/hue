@@ -1,0 +1,11 @@
+{
+  "name" : "# users",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(*)",
+    "tables" : [ "lodr_dev_local.users" ]
+  },{
+    "sql" : "count(distinct user_id)",
+    "tables" : [ "lodr_dev_local.load_jobs" ]
+  } ]
+}

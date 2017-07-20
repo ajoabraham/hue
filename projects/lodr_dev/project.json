@@ -1,0 +1,8 @@
+{
+  "name" : "Lodr Dev",
+  "maxReportExecutionTime" : 1800,
+  "maxResultRows" : 100000,
+  "maxTempExecutionTime" : -1,
+  "maxTempResultRows" : -1,
+  "desc" : null
+}

@@ -18,7 +18,7 @@ public final class PersistUtils {
 	public static boolean isValidProject(String projectName) {
 		return projectExists(projectName);
 	}
-	
+		
 	public static boolean isValidDatasource(String projectName, String dsName) {
 		Path dsFolder = FileSystems.getDefault().getPath(ProjectServices.getInstance().getConfig().getProjectsDirectory(), projectName, dsName);
 		Path dsFile = FileSystems.getDefault().getPath(ProjectServices.getInstance().getConfig().getProjectsDirectory(), projectName, dsName, "datasource.json");
