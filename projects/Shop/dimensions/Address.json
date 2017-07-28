@@ -1,0 +1,8 @@
+{
+  "name" : "Address",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Address",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.employees", "shop_db.public.customers" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "State Region",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "StateRegion",
+    "tables" : [ "shop_db.public.usstates" ]
+  } ]
+}

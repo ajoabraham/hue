@@ -1,0 +1,8 @@
+{
+  "name" : "Ship Address",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ShipAddress",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

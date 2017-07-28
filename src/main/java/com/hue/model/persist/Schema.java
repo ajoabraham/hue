@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +12,13 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.hue.common.CardinalityType;
-import com.hue.model.*;
+import com.hue.graph.Edges;
+import com.hue.model.Datasource;
+import com.hue.model.Dimension;
+import com.hue.model.Join;
+import com.hue.model.Measure;
+import com.hue.model.Project;
+import com.hue.model.Table;
 
 public class Schema {
 	protected static final Logger logger = LoggerFactory.getLogger(Schema.class.getName());
@@ -24,7 +29,7 @@ public class Schema {
 	private final Set<Measure> measures = Sets.newConcurrentHashSet();	
 	private final Map<Datasource,Set<Table>> dsTables = Maps.newConcurrentMap();
 	private final Map<Datasource,Set<Join>> dsJoins = Maps.newConcurrentMap();
-	private final Map<Datasource,TinkerGraph> dsGraph = Maps.newConcurrentMap();
+	private TinkerGraph dsGraph;
 	
 	public Schema(Project project) {
 		this.project = project;
@@ -133,33 +138,73 @@ public class Schema {
 		
 	}
 	
-	public void buildGraphs() {
+	public TinkerGraph getGraph() {
+		return dsGraph;
+	}
+	
+	public TinkerGraph buildGraph() {
+		if(dsGraph != null) dsGraph.close();
+		
+		dsGraph = TinkerGraph.open();		
 		datasources.stream().forEach(ds -> {
-			TinkerGraph tg = TinkerGraph.open();
-			dsGraph.put(ds, tg);
+			
 			getTables(ds).stream().forEach(t -> {
-				t.v = tg.addVertex("table");
-				t.v.property("object", t);
+				t.v(dsGraph.addVertex("table"));
+				t.v().property("object", t);
+				t.v().property("name", t.getName());
 			});
 			getJoins(ds).stream().forEach(j -> {
-				j.v = tg.addVertex("join");
-				j.v.property("object", j);
+				j.v(dsGraph.addVertex("join"));
+				j.v().property("object", j);
+				j.v().property("allow_roll_down", j.getAllowRollDown());				
 				
 				if(j.getCardinalityType()==CardinalityType.ONE_TO_MANY) {
-					((Table) j.getLeft()).v.addEdge("joins", j.v);
-					j.v.addEdge("joins", ((Table) j.getRight()).v);
+					((Table) j.getRight()).v().addEdge("joins", j.v());
+					j.v().addEdge(Edges.JOINS.getName(), ((Table) j.getLeft()).v());
 				}
 				else if(j.getCardinalityType()==CardinalityType.MANY_TO_ONE) {					
-					j.v.addEdge("joins", ((Table) j.getLeft()).v);
-					((Table) j.getRight()).v.addEdge("joins", j.v);
+					j.v().addEdge(Edges.JOINS.getName(), ((Table) j.getRight()).v());
+					((Table) j.getLeft()).v().addEdge("joins", j.v());
 				}else {
-					((Table) j.getLeft()).v.addEdge("joins", j.v);
-					j.v.addEdge("joins", ((Table) j.getRight()).v);
+					((Table) j.getLeft()).v().addEdge("joins", j.v());
+					j.v().addEdge(Edges.JOINS.getName(), ((Table) j.getRight()).v());
 					
-					j.v.addEdge("joins", ((Table) j.getLeft()).v);
-					((Table) j.getRight()).v.addEdge("joins", j.v);
+					j.v().addEdge(Edges.JOINS.getName(), ((Table) j.getLeft()).v());
+					((Table) j.getRight()).v().addEdge("joins", j.v());
 				}
 			});
 		});
+		
+		getDimensions().stream().forEach(d -> {
+			d.v(dsGraph.addVertex("dimension"));
+			d.v().property("object", d);
+			d.v().property("name", d.getName());
+			
+			d.getExpressions().stream().forEach(e -> {
+				e.v(dsGraph.addVertex("expression"));
+				e.v().property("object", e);
+				d.v().addEdge(Edges.HAS_EXPRESSION.getName(), e.v());
+				e.getTables().stream().forEach(t -> {
+					e.v().addEdge(Edges.QUERIES_FROM.getName(), t.v());
+				});
+			});
+		});
+		
+		getMeasures().stream().forEach(d -> {
+			d.v(dsGraph.addVertex("measure"));
+			d.v().property("object", d);
+			d.v().property("name", d.getName());
+			
+			d.getExpressions().stream().forEach(e -> {
+				e.v(dsGraph.addVertex("expression"));
+				e.v().property("object", e);
+				d.v().addEdge(Edges.HAS_EXPRESSION.getName(), e.v());
+				e.getTables().stream().forEach(t -> {
+					e.v().addEdge(Edges.QUERIES_FROM.getName(), t.v());
+				});
+			});
+		});
+		
+		return dsGraph;
 	}
 }

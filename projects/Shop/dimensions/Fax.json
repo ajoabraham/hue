@@ -1,0 +1,8 @@
+{
+  "name" : "Fax",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Fax",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.customers" ]
+  } ]
+}

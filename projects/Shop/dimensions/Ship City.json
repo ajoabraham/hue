@@ -1,0 +1,8 @@
+{
+  "name" : "Ship City",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ShipCity",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

@@ -1,0 +1,19 @@
+{
+  "name" : "employeeterritories",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "employeeterritories",
+  "rowCount" : 49,
+  "tableType" : "BRIDGE",
+  "columns" : [ {
+    "name" : "TerritoryID",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "EmployeeID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  } ]
+}

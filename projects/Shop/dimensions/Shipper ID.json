@@ -1,0 +1,8 @@
+{
+  "name" : "Shipper ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ShipperID",
+    "tables" : [ "shop_db.public.shippers", "shop_db.public.shippers_tmp" ]
+  } ]
+}

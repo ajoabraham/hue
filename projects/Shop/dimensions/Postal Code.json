@@ -1,0 +1,8 @@
+{
+  "name" : "Postal Code",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "PostalCode",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.employees", "shop_db.public.customers" ]
+  } ]
+}

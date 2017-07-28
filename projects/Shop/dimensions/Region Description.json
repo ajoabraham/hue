@@ -1,0 +1,8 @@
+{
+  "name" : "Region Description",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "RegionDescription",
+    "tables" : [ "shop_db.public.region" ]
+  } ]
+}

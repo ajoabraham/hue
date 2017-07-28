@@ -1,0 +1,8 @@
+{
+  "name" : "# State ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(StateID)",
+    "tables" : [ "shop_db.public.usstates" ]
+  } ]
+}

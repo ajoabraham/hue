@@ -1,0 +1,8 @@
+{
+  "name" : "Employee ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "EmployeeID",
+    "tables" : [ "shop_db.public.orders", "shop_db.public.employeeterritories", "shop_db.public.employees" ]
+  } ]
+}

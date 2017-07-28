@@ -1,0 +1,8 @@
+{
+  "name" : "Category Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "CategoryName",
+    "tables" : [ "shop_db.public.categories" ]
+  } ]
+}

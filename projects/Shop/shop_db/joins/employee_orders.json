@@ -1,0 +1,9 @@
+{
+  "sql" : "employees.EmployeeID = orders.EmployeeID",
+  "leftTableName" : "employees",
+  "rightTableName" : "orders",
+  "cost" : 300,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

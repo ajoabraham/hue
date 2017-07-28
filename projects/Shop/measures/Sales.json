@@ -1,0 +1,8 @@
+{
+  "name" : "Sales",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(UnitPrice*Quantity)",
+    "tables" : [ "shop_db.public.order_details"]
+  } ]
+}

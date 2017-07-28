@@ -1,0 +1,8 @@
+{
+  "name" : "Phone",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Phone",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.shippers", "shop_db.public.shippers_tmp", "shop_db.public.customers" ]
+  } ]
+}

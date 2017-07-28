@@ -1,0 +1,9 @@
+{
+  "sql" : "orders.OrderID = order_details.OrderID",
+  "leftTableName" : "orders",
+  "rightTableName" : "order_details",
+  "cost" : 300,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

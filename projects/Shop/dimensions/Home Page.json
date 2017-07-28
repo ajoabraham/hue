@@ -1,0 +1,8 @@
+{
+  "name" : "Home Page",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "HomePage",
+    "tables" : [ "shop_db.public.suppliers" ]
+  } ]
+}

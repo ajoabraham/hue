@@ -1,0 +1,9 @@
+{
+  "sql" : "categories.CategoryID = products.ProductID",
+  "leftTableName" : "categories",
+  "rightTableName" : "products",
+  "cost" : 200,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

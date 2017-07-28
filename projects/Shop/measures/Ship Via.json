@@ -1,0 +1,8 @@
+{
+  "name" : "Ship Via",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(ShipVia)",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

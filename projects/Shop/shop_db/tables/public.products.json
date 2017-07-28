@@ -1,0 +1,59 @@
+{
+  "name" : "products",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "products",
+  "rowCount" : 77,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "SupplierID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CategoryID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Discontinued",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "UnitPrice",
+    "desc" : null,
+    "dataType" : "DECIMAL",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "UnitsOnOrder",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ProductName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ProductID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "QuantityPerUnit",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "UnitsInStock",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ReorderLevel",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

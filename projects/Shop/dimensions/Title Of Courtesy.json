@@ -1,0 +1,8 @@
+{
+  "name" : "Title Of Courtesy",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "TitleOfCourtesy",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

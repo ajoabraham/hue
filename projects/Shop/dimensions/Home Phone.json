@@ -1,0 +1,8 @@
+{
+  "name" : "Home Phone",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "HomePhone",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

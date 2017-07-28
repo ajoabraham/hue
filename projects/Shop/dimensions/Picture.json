@@ -1,0 +1,8 @@
+{
+  "name" : "Picture",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Picture",
+    "tables" : [ "shop_db.public.categories" ]
+  } ]
+}

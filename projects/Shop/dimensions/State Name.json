@@ -1,0 +1,8 @@
+{
+  "name" : "State Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "StateName",
+    "tables" : [ "shop_db.public.usstates" ]
+  } ]
+}

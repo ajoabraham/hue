@@ -74,7 +74,13 @@ public class GenerationServices {
 						logger.debug("Generating table " + t.getName());
 						ProjectServices.getInstance().save(s,datasource, t);
 					}
-				}			
+				}
+				
+				if(tmatches.isEmpty()) {
+					s.addTable(datasource, t);
+					logger.debug("Generating table " + t.getName());
+					ProjectServices.getInstance().save(s,datasource, t);
+				}
 				
 			} catch (ServiceException e) {
 				throw new RuntimeException(e);

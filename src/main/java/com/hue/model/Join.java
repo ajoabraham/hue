@@ -8,9 +8,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hue.common.CardinalityType;
 import com.hue.common.JoinType;
+import com.hue.graph.Graphable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Join{
+public class Join implements Graphable{
 
 	private IJoinable left;
 	private IJoinable right;
@@ -28,7 +29,7 @@ public class Join{
 	@JsonIgnore
 	private File file;
 	@JsonIgnore
-	public Vertex v;
+	private Vertex v;
 
 	public Join(IJoinable left, IJoinable right, String sql, JoinType type) {
 		this.left = left;
@@ -216,5 +217,14 @@ public class Join{
 	@Override
 	public String toString() {
 		return getName();
+	}
+	
+	@Override
+	public Vertex v() {
+		return v;
+	}
+	@Override
+	public void v(Vertex v) {
+		this.v = v;		
 	}
 }

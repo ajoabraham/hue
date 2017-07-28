@@ -1,0 +1,8 @@
+{
+  "name" : "Territory Description",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "TerritoryDescription",
+    "tables" : [ "shop_db.public.territories" ]
+  } ]
+}

@@ -1,0 +1,69 @@
+{
+  "name" : "suppliers",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "suppliers",
+  "rowCount" : 29,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "SupplierID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "HomePage",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ContactTitle",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Address",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Phone",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "PostalCode",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "City",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Country",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ContactName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Fax",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CompanyName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Region",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

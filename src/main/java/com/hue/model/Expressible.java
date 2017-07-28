@@ -3,12 +3,19 @@ package com.hue.model;
 import java.util.Optional;
 import java.util.Set;
 
-import com.google.common.collect.Sets;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
 
-public class Expressible extends HueBase {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Sets;
+import com.hue.graph.Graphable;
+
+public class Expressible extends HueBase implements Graphable {
 	private static final long serialVersionUID = 1L;	
 	private final Set<FieldExpression> expressions = Sets.newHashSet();
-		
+	
+	@JsonIgnore
+	private Vertex v;
+	
 	public void addExpression(FieldExpression exp) {
 		Optional<FieldExpression> res = expressions.stream().filter( exp1 -> exp1.equals(exp)).findFirst();
 		if(res.isPresent()) {
@@ -30,5 +37,14 @@ public class Expressible extends HueBase {
 		return getExpressions().stream()
 			.filter(fe -> fe.hasTable(t))
 			.findFirst();
+	}
+	
+	@Override
+	public Vertex v() {
+		return v;
+	}
+	@Override
+	public void v(Vertex v) {
+		this.v = v;		
 	}
 }

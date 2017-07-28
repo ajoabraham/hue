@@ -1,0 +1,8 @@
+{
+  "name" : "Discontinued",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(Discontinued)",
+    "tables" : [ "shop_db.public.products" ]
+  } ]
+}

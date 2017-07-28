@@ -1,0 +1,8 @@
+{
+  "name" : "Units In Stock",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(UnitsInStock)",
+    "tables" : [ "shop_db.public.products" ]
+  } ]
+}

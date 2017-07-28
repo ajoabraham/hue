@@ -1,0 +1,8 @@
+{
+  "name" : "Freight",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(Freight)",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

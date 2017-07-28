@@ -1,0 +1,8 @@
+{
+  "name" : "# Region ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(RegionID)",
+    "tables" : [ "shop_db.public.region", "shop_db.public.territories" ]
+  } ]
+}

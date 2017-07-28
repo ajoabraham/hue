@@ -1,0 +1,19 @@
+{
+  "name" : "region",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "region",
+  "rowCount" : 4,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "RegionID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "RegionDescription",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

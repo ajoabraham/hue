@@ -1,0 +1,9 @@
+{
+  "sql" : "databases.id = loaders.database_id",
+  "leftTableName" : "databases",
+  "rightTableName" : "loaders",
+  "cost" : 500,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

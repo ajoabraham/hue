@@ -1,0 +1,8 @@
+{
+  "name" : "Quantity Per Unit",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "QuantityPerUnit",
+    "tables" : [ "shop_db.public.products" ]
+  } ]
+}

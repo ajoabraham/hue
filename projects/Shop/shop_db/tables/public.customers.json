@@ -1,0 +1,64 @@
+{
+  "name" : "customers",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "customers",
+  "rowCount" : 91,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "ContactTitle",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Address",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Phone",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "PostalCode",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CustomerID",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "City",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Country",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ContactName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Fax",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CompanyName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Region",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

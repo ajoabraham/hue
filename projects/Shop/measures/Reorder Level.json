@@ -1,0 +1,8 @@
+{
+  "name" : "Reorder Level",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(ReorderLevel)",
+    "tables" : [ "shop_db.public.products" ]
+  } ]
+}

@@ -1,0 +1,29 @@
+{
+  "name" : "categories",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "categories",
+  "rowCount" : 8,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "CategoryID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "Description",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Picture",
+    "desc" : null,
+    "dataType" : "UNSUPPORTED",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CategoryName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

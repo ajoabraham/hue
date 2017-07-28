@@ -1,0 +1,8 @@
+{
+  "name" : "Units On Order",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(UnitsOnOrder)",
+    "tables" : [ "shop_db.public.products" ]
+  } ]
+}

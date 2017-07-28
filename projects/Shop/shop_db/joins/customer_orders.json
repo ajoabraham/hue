@@ -1,0 +1,9 @@
+{
+  "sql" : "customers.CustomerID = orders.CustomerID",
+  "leftTableName" : "customers",
+  "rightTableName" : "orders",
+  "cost" : 300,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

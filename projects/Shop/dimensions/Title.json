@@ -1,0 +1,8 @@
+{
+  "name" : "Title",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Title",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

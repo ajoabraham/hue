@@ -1,0 +1,34 @@
+{
+  "name" : "order_details",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "order_details",
+  "rowCount" : 2155,
+  "tableType" : "FACT",
+  "columns" : [ {
+    "name" : "Discount",
+    "desc" : null,
+    "dataType" : "DECIMAL",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "UnitPrice",
+    "desc" : null,
+    "dataType" : "DECIMAL",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Quantity",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ProductID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "OrderID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  } ]
+}

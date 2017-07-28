@@ -1,0 +1,8 @@
+{
+  "name" : "Ship Postal Code",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ShipPostalCode",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

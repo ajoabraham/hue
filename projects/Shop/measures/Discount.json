@@ -1,0 +1,8 @@
+{
+  "name" : "Discount",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(Discount)",
+    "tables" : [ "shop_db.public.order_details" ]
+  } ]
+}

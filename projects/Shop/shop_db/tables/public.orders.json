@@ -1,0 +1,79 @@
+{
+  "name" : "orders",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "orders",
+  "rowCount" : 830,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "RequiredDate",
+    "desc" : null,
+    "dataType" : "DATE",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShippedDate",
+    "desc" : null,
+    "dataType" : "DATE",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipCity",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "OrderDate",
+    "desc" : null,
+    "dataType" : "DATE",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipVia",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "CustomerID",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipPostalCode",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "OrderID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "ShipRegion",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipAddress",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipCountry",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "EmployeeID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Freight",
+    "desc" : null,
+    "dataType" : "DECIMAL",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

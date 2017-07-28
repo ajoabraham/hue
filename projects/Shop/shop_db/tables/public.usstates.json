@@ -1,0 +1,29 @@
+{
+  "name" : "usstates",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "usstates",
+  "rowCount" : 51,
+  "tableType" : "FACT",
+  "columns" : [ {
+    "name" : "StateName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "StateRegion",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "StateAbbr",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "StateID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

@@ -13,9 +13,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.hue.common.ColumnKeyType;
 import com.hue.common.TableType;
+import com.hue.graph.Graphable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Table extends HueBase implements IJoinable {
+public class Table extends HueBase implements IJoinable,Graphable {
 	private static final long serialVersionUID = 1L;
 
 	private String schemaName;
@@ -28,7 +29,7 @@ public class Table extends HueBase implements IJoinable {
 	private Set<Column> columns = Sets.newHashSet();
 	
 	@JsonIgnore
-	public Vertex v;
+	private Vertex v;
 	
 	public Table() {}
 	public Table(Datasource ds, String schema, String name, TableType type, int rowCount) {
@@ -172,4 +173,13 @@ public class Table extends HueBase implements IJoinable {
     public String toString() {
     		return String.join(".", getPhysicalNameSegments());
     }
+    
+	@Override
+	public Vertex v() {
+		return v;
+	}
+	@Override
+	public void v(Vertex v) {
+		this.v = v;		
+	}
 }

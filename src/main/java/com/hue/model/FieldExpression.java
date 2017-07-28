@@ -2,12 +2,19 @@ package com.hue.model;
 
 import java.util.Set;
 
-import com.google.common.collect.Sets;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
 
-public class FieldExpression {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Sets;
+import com.hue.graph.Graphable;
+
+public class FieldExpression implements Graphable{
 	private String sql;
 	private Set<Table> tables = Sets.newHashSet();
-
+	
+	@JsonIgnore
+	private Vertex v;
+	
 	public FieldExpression() {
 	}
 	
@@ -25,7 +32,16 @@ public class FieldExpression {
 		if(sql != null)
 			this.sql = sql.trim();
 	}
-
+	
+	@Override
+	public Vertex v() {
+		return v;
+	}
+	@Override
+	public void v(Vertex v) {
+		this.v = v;		
+	}
+	
 	public Set<Table> getTables() {
 		return tables;
 	}
@@ -61,7 +77,7 @@ public class FieldExpression {
 	
 	@Override
 	public String toString() {
-		return sql+":"+tables.toString();
+		return "exp:" + sql;
 	}
 
 	public boolean hasTable(Table t) {

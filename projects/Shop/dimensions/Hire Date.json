@@ -1,0 +1,8 @@
+{
+  "name" : "Hire Date",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "HireDate",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

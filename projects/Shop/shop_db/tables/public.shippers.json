@@ -1,0 +1,24 @@
+{
+  "name" : "shippers",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "shippers",
+  "rowCount" : 6,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "Phone",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ShipperID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "CompanyName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

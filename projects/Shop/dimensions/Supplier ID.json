@@ -1,0 +1,8 @@
+{
+  "name" : "Supplier ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "SupplierID",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.products" ]
+  } ]
+}

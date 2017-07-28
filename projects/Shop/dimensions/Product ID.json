@@ -1,0 +1,8 @@
+{
+  "name" : "Product ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ProductID",
+    "tables" : [ "shop_db.public.order_details", "shop_db.public.products" ]
+  } ]
+}

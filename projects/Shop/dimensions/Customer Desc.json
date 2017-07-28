@@ -1,0 +1,8 @@
+{
+  "name" : "Customer Desc",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "CustomerDesc",
+    "tables" : [ "shop_db.public.customerdemographics" ]
+  } ]
+}

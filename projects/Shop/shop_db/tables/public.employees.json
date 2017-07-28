@@ -1,0 +1,99 @@
+{
+  "name" : "employees",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "employees",
+  "rowCount" : 9,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "Address",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Title",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "PostalCode",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "FirstName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Photo",
+    "desc" : null,
+    "dataType" : "UNSUPPORTED",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "City",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Extension",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "PhotoPath",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "HomePhone",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "TitleOfCourtesy",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "LastName",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "HireDate",
+    "desc" : null,
+    "dataType" : "DATE",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Country",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "ReportsTo",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "EmployeeID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "BirthDate",
+    "desc" : null,
+    "dataType" : "DATE",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Region",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "Notes",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

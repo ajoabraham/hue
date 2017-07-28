@@ -1,0 +1,24 @@
+{
+  "name" : "territories",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "territories",
+  "rowCount" : 53,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "TerritoryID",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "TerritoryDescription",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "RegionID",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Reports To",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(ReportsTo)",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

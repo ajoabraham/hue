@@ -1,0 +1,8 @@
+{
+  "name" : "Ship Region",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ShipRegion",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Contact Title",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "ContactTitle",
+    "tables" : [ "shop_db.public.suppliers", "shop_db.public.customers" ]
+  } ]
+}

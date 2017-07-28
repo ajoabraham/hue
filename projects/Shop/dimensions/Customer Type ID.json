@@ -1,0 +1,8 @@
+{
+  "name" : "Customer Type ID",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "CustomerTypeID",
+    "tables" : [ "shop_db.public.customercustomerdemo", "shop_db.public.customerdemographics" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "State Abbr",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "StateAbbr",
+    "tables" : [ "shop_db.public.usstates" ]
+  } ]
+}

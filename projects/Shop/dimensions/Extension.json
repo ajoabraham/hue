@@ -1,0 +1,8 @@
+{
+  "name" : "Extension",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "Extension",
+    "tables" : [ "shop_db.public.employees" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Required Date",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "RequiredDate",
+    "tables" : [ "shop_db.public.orders" ]
+  } ]
+}
