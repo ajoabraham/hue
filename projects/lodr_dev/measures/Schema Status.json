@@ -1,0 +1,8 @@
+{
+  "name" : "Schema Status",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(schema_status)",
+    "tables" : [ "lodr_dev_local.public.databases", "lodr_dev_local.public.tables" ]
+  } ]
+}

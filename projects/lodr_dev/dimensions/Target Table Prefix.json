@@ -1,0 +1,8 @@
+{
+  "name" : "Target Table Prefix",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "target_table_prefix",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

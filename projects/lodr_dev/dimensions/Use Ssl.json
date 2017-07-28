@@ -1,0 +1,8 @@
+{
+  "name" : "Use Ssl",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "use_ssl",
+    "tables" : [ "lodr_dev_local.public.databases" ]
+  } ]
+}

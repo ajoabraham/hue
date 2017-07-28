@@ -22,6 +22,7 @@ import com.hue.model.Join;
 import com.hue.model.Measure;
 import com.hue.model.Project;
 import com.hue.model.Table;
+import com.hue.services.ServiceException;
 
 public class ProjectServices {
 	private static final Logger logger = LoggerFactory.getLogger(ProjectServices.class.getName());
@@ -227,6 +228,53 @@ public class ProjectServices {
 			Files.createDirectories(FileSystems.getDefault().getPath(s.getProject().getFile().toPath().toString(),"measures"));
 		}		
 		logger.info("finished loading measures from " + s.getProject().getFile().getPath());
+	}
+
+	public void save(Schema s, Datasource datasource, Table t) throws ServiceException {
+		
+		try {
+			if(t.getFile() == null) {
+				t.setFile(new File(datasource.getFile().toString()+"/tables/"+ String.join(".", t.getPhysicalNameSegments()) +".json"));
+			}
+			mapper.writeValue(t.getFile(), t);
+		} catch (IOException e) {
+			throw new ServiceException("Unable to save: \n" + e.getMessage());
+		}
+		
+	}
+
+	public void save(Schema s, Datasource datasource, Join j) throws ServiceException {
+		try {
+			if(j.getFile() == null) {
+				j.setFile(new File(datasource.getFile().toString()+"/joins/"+ j.getName() +".json"));
+			}
+			mapper.writeValue(j.getFile(), j);
+		} catch (IOException e) {
+			throw new ServiceException("Unable to save: \n" + e.getMessage());
+		}
+		
+	}
+	
+	public void save(Schema s, Dimension d) throws ServiceException {
+		try {
+			if(d.getFile() == null) {
+				d.setFile(new File(s.getProject().getFile().toString()+"/dimensions/"+ d.getName() +".json"));
+			}
+			mapper.writeValue(d.getFile(), d);
+		} catch (IOException e) {
+			throw new ServiceException("Unable to save: \n" + e.getMessage());
+		}		
+	}
+
+	public void save(Schema s, Measure msr) throws ServiceException {
+		try {
+			if(msr.getFile() == null) {
+				msr.setFile(new File(s.getProject().getFile().toString()+"/measures/"+ msr.getName() +".json"));
+			}
+			mapper.writeValue(msr.getFile(), msr);
+		} catch (IOException e) {
+			throw new ServiceException("Unable to save: \n" + e.getMessage());
+		}		
 	}
 	
 }

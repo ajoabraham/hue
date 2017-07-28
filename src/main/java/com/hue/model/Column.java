@@ -1,6 +1,7 @@
 package com.hue.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hue.common.ColumnKeyType;
 import com.hue.common.DataType;
 
@@ -10,7 +11,10 @@ public class Column extends HueBase {
 
 	private DataType dataType = DataType.TEXT ;
 	private ColumnKeyType keyType = ColumnKeyType.NO_KEY_TYPE;
-
+	
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	private String sql;
+	
 	public Column() {
 	}
 
@@ -36,6 +40,15 @@ public class Column extends HueBase {
 		this.keyType = keyType;
 	}
 
+	public String getSql() {
+		return sql;
+	}
+
+	public void setSql(String sql) {
+		if(sql != null)
+			this.sql = sql.trim();
+	}
+
 	@Override
 	public Object clone() {
 		Column column = new Column();
@@ -43,7 +56,17 @@ public class Column extends HueBase {
 		column.setDataType(getDataType());
 		column.setKeyType(getKeyType());
 		column.setName(getName());
+		column.setSql(getSql());
 
 		return column;
+	}
+	
+	@Override
+	public String toString() {
+		if(getSql() != null) {
+			return super.getName() + ":" + getDataType().toString()+  ":sql:" + getSql();
+		}else {
+			return super.getName() + ":" + getDataType().toString();
+		}
 	}
 }

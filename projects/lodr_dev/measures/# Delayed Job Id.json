@@ -1,0 +1,8 @@
+{
+  "name" : "# Delayed Job Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

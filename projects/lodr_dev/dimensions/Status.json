@@ -1,0 +1,8 @@
+{
+  "name" : "Status",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "status",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  } ]
+}

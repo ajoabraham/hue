@@ -1,0 +1,8 @@
+{
+  "name" : "Field Errors",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "field_errors",
+    "tables" : [ "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.lj_temp" ]
+  } ]
+}

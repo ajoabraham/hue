@@ -1,0 +1,8 @@
+{
+  "name" : "Load New Files Only",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "load_new_files_only",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

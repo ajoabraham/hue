@@ -1,0 +1,8 @@
+{
+  "name" : "Multi File Merge Keys",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "multi_file_merge_keys",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

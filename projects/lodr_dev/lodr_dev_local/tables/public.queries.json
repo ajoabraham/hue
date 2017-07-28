@@ -1,0 +1,89 @@
+{
+  "name" : "queries",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "queries",
+  "rowCount" : 3,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "total_rows",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "created_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "script_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "sql",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "query_error",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "last_executed_query",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "user_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "updated_sub",
+    "desc" : null,
+    "dataType" : "BOOLEAN",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "started_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "finished_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "fetched_rows",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "status",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "info",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "result_data",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

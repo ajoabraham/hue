@@ -1,0 +1,8 @@
+{
+  "name" : "Content",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "content",
+    "tables" : [ "lodr_dev_local.public.scripts" ]
+  } ]
+}

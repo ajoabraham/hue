@@ -1,0 +1,8 @@
+{
+  "name" : "Finished At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "finished_at",
+    "tables" : [ "lodr_dev_local.public.queries", "lodr_dev_local.public.bucket_load_histories", "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.lj_temp" ]
+  } ]
+}

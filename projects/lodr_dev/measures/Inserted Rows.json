@@ -1,0 +1,8 @@
+{
+  "name" : "Inserted Rows",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(inserted_rows)",
+    "tables" : [ "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.lj_temp" ]
+  } ]
+}

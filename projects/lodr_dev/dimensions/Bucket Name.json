@@ -1,0 +1,8 @@
+{
+  "name" : "Bucket Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "bucket_name",
+    "tables" : [ "lodr_dev_local.public.s3_buckets", "lodr_dev_local.public.s3_buckets2" ]
+  } ]
+}

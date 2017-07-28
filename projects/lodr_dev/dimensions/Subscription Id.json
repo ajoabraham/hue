@@ -1,0 +1,8 @@
+{
+  "name" : "Subscription Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "id",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  } ]
+}

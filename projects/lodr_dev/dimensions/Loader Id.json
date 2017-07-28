@@ -1,0 +1,11 @@
+{
+  "name" : "Loader Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "loader_id",
+    "tables" : [ "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.loader_sources", "lodr_dev_local.public.lj_temp" ]
+  }, {
+    "sql" : "id",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

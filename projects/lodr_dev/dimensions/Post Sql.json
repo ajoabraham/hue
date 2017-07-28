@@ -1,0 +1,8 @@
+{
+  "name" : "Post Sql",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "post_sql",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

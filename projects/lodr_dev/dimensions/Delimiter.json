@@ -1,0 +1,8 @@
+{
+  "name" : "Delimiter",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "delimiter",
+    "tables" : [ "lodr_dev_local.public.source_files", "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

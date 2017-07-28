@@ -1,0 +1,8 @@
+{
+  "name" : "Uploaded At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "uploaded_at",
+    "tables" : [ "lodr_dev_local.public.source_files" ]
+  } ]
+}

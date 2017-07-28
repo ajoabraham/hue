@@ -1,0 +1,8 @@
+{
+  "name" : "Result Data",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "result_data",
+    "tables" : [ "lodr_dev_local.public.queries" ]
+  } ]
+}

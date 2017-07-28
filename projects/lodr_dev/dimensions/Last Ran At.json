@@ -1,0 +1,8 @@
+{
+  "name" : "Last Ran At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "last_ran_at",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

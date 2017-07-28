@@ -397,7 +397,7 @@ public final class CommonUtils {
 	}
 
 	// To determine an expressible subtype
-	public static DataType mapToExpressibleSubtype(String javaTypeName, String javaSqlTypeName,
+	public static DataType mapToDataType(String javaTypeName, String javaSqlTypeName,
 			String dbTypeName) {
 		DataType subtype = DataType.TEXT;
 
@@ -410,23 +410,32 @@ public final class CommonUtils {
 			else if (name.contains("time")) {
 				subtype = DataType.TIMESTAMP;
 			}
-			else if (name.contains("int") || name.contains("short")) {
+			else if (name.contains("int") 
+					|| name.contains("short")
+					|| name.equalsIgnoreCase("serial")) {
 				subtype = DataType.INTEGER;
 			}
-			else if (name.contains("bigint") ) {
+			else if (name.contains("bigint") || name.contains("bigserial")) {
 				subtype = DataType.BIGINT;
 			}
 			else if (name.contains("float") || name.contains("numeric") || name.contains("real")
 					|| name.contains("double")) {
 				subtype = DataType.DECIMAL;
 			}
-			else if (name.contains("char") || name.contains("text") || name.contains("clob")) {
+			else if (name.contains("char") 
+					|| name.contains("text") 
+					|| name.contains("clob")
+					|| name.contains("json")
+					|| name.contains("inet")
+					|| name.contains("xml")
+					|| name.contains("uuid")) {
 				subtype = DataType.TEXT;
 			}
 			else if (name.contains("bool") || name.contains("bit")) {
 				subtype = DataType.BOOLEAN;
 			}
 			else {
+				subtype = DataType.UNSUPPORTED;
 				LoggerFactory.getLogger(CommonUtils.class.getName()).error("Unknown DB Type Name - " + dbTypeName);
 			}
 		}

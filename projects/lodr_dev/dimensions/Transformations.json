@@ -1,0 +1,8 @@
+{
+  "name" : "Transformations",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "transformations",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

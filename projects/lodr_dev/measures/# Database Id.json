@@ -1,0 +1,11 @@
+{
+  "name" : "# Database Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(database_id)",
+    "tables" : [ "lodr_dev_local.public.loaders", "lodr_dev_local.public.scripts", "lodr_dev_local.public.bucket_loaders", "lodr_dev_local.public.tables" ]
+  }, {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.databases" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Rows",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(rows)",
+    "tables" : [ "lodr_dev_local.public.source_files" ]
+  } ]
+}

@@ -2,6 +2,8 @@ package com.hue.model;
 
 import java.io.File;
 
+import org.apache.tinkerpop.gremlin.structure.Vertex;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hue.common.CardinalityType;
@@ -25,6 +27,8 @@ public class Join{
 	private Datasource ds;
 	@JsonIgnore
 	private File file;
+	@JsonIgnore
+	public Vertex v;
 
 	public Join(IJoinable left, IJoinable right, String sql, JoinType type) {
 		this.left = left;
@@ -209,6 +213,8 @@ public class Join{
 		return true;
 	}
 	
-	
-
+	@Override
+	public String toString() {
+		return getName();
+	}
 }

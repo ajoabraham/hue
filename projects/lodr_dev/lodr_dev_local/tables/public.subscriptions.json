@@ -1,0 +1,119 @@
+{
+  "name" : "subscriptions",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "subscriptions",
+  "rowCount" : 5,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "last4",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "cancel_at_period_end",
+    "desc" : null,
+    "dataType" : "BOOLEAN",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "rows_processed",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "queries_run",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "canceled_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "previous_plan_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "current_period_ends_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "exp_month",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "exp_year",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "created_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "stripe_sub_id",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "current_period_starts_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "stripe_customer_id",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "user_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "card_brand",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "stripe_event",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "is_custom",
+    "desc" : null,
+    "dataType" : "BOOLEAN",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "status",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "reset_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "plan_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

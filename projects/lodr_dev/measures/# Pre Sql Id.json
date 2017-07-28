@@ -1,0 +1,8 @@
+{
+  "name" : "# Pre Sql Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(pre_sql_id)",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

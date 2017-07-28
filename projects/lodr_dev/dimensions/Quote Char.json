@@ -1,0 +1,8 @@
+{
+  "name" : "Quote Char",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "quote_char",
+    "tables" : [ "lodr_dev_local.public.source_files", "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

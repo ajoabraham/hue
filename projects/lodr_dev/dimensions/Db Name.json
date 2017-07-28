@@ -1,0 +1,8 @@
+{
+  "name" : "Db Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "db_name",
+    "tables" : [ "lodr_dev_local.public.databases" ]
+  } ]
+}

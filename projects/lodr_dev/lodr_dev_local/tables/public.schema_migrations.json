@@ -1,0 +1,14 @@
+{
+  "name" : "schema_migrations",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "schema_migrations",
+  "rowCount" : 30,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "version",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "PRIMARY_KEY"
+  } ]
+}

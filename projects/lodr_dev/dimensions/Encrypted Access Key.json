@@ -1,0 +1,8 @@
+{
+  "name" : "Encrypted Access Key",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "encrypted_access_key",
+    "tables" : [ "lodr_dev_local.public.s3_buckets", "lodr_dev_local.public.s3_buckets2" ]
+  } ]
+}

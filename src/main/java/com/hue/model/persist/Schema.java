@@ -5,13 +5,19 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+import com.hue.common.CardinalityType;
 import com.hue.model.*;
 
 public class Schema {
+	protected static final Logger logger = LoggerFactory.getLogger(Schema.class.getName());
+	
 	private Project project;
 	private final Set<Datasource> datasources = Sets.newConcurrentHashSet();	
 	private final Set<Dimension> dimensions = Sets.newConcurrentHashSet();	
@@ -68,7 +74,7 @@ public class Schema {
 	}
 	
 	public Set<Table> getTables(Datasource ds) {
-		return Collections.unmodifiableSet(dsTables.get(ds));
+		return Collections.unmodifiableSet(dsTables.getOrDefault(ds, Sets.newHashSet()));
 	}
 	
 	public Optional<Table> getTable(Datasource ds, String name) {
@@ -93,6 +99,7 @@ public class Schema {
 	public void addTable(Datasource ds, Table t) {
 		addDatasource(ds);
 		t.setDatasource(ds);
+		t.setProject(getProject());
 		
 		if(dsTables.containsKey(ds)) {
 			dsTables.get(ds).add(t);
@@ -103,12 +110,16 @@ public class Schema {
 		}
 	}
 	
+	public Set<Join> getJoins(Datasource ds) {
+		return Collections.unmodifiableSet(dsJoins.getOrDefault(ds, Sets.newHashSet()));
+	}
+	
 	public void addJoin(Datasource ds, Join j) {
 		addDatasource(ds);
 		j.setDatasource(ds);
 		
-		if( getTable(ds, j.getLeftTableName()).isPresent() &&
-				getTable(ds,j.getRightTableName()).isPresent()){
+		if( j.getLeft() != null  &&
+				j.getRight() != null){
 		
 			if(dsJoins.containsKey(ds)) {
 				dsJoins.get(ds).add(j);
@@ -118,8 +129,6 @@ public class Schema {
 				dsJoins.put(ds, n);
 			}
 			
-		}else {
-			// TODO: error table in join doesnt exist for ds
 		}		
 		
 	}
@@ -128,7 +137,29 @@ public class Schema {
 		datasources.stream().forEach(ds -> {
 			TinkerGraph tg = TinkerGraph.open();
 			dsGraph.put(ds, tg);
-			getTables(ds).stream().forEach(t -> tg.addVertex("table", t));
+			getTables(ds).stream().forEach(t -> {
+				t.v = tg.addVertex("table");
+				t.v.property("object", t);
+			});
+			getJoins(ds).stream().forEach(j -> {
+				j.v = tg.addVertex("join");
+				j.v.property("object", j);
+				
+				if(j.getCardinalityType()==CardinalityType.ONE_TO_MANY) {
+					((Table) j.getLeft()).v.addEdge("joins", j.v);
+					j.v.addEdge("joins", ((Table) j.getRight()).v);
+				}
+				else if(j.getCardinalityType()==CardinalityType.MANY_TO_ONE) {					
+					j.v.addEdge("joins", ((Table) j.getLeft()).v);
+					((Table) j.getRight()).v.addEdge("joins", j.v);
+				}else {
+					((Table) j.getLeft()).v.addEdge("joins", j.v);
+					j.v.addEdge("joins", ((Table) j.getRight()).v);
+					
+					j.v.addEdge("joins", ((Table) j.getLeft()).v);
+					((Table) j.getRight()).v.addEdge("joins", j.v);
+				}
+			});
 		});
 	}
 }

@@ -1,0 +1,8 @@
+{
+  "name" : "Current Period Ends At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "current_period_ends_at",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  } ]
+}

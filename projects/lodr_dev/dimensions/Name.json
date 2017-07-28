@@ -1,0 +1,8 @@
+{
+  "name" : "Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "name",
+    "tables" : [ "lodr_dev_local.public.projects", "lodr_dev_local.public.loaders", "lodr_dev_local.public.source_files", "lodr_dev_local.public.scripts", "lodr_dev_local.public.plans", "lodr_dev_local.public.zip_files", "lodr_dev_local.public.bucket_loaders", "lodr_dev_local.public.databases", "lodr_dev_local.public.tables" ]
+  } ]
+}

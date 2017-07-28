@@ -1,0 +1,8 @@
+{
+  "name" : "Primary",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "primary",
+    "tables" : [ "lodr_dev_local.public.deks" ]
+  } ]
+}

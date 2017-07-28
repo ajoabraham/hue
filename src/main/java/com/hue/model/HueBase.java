@@ -78,4 +78,9 @@ public class HueBase implements Serializable {
 			return false;
 		return true;
 	}
+	
+
+	public String toString() {
+		return this.getClass().getSimpleName()+": "+getName();
+	}
 }

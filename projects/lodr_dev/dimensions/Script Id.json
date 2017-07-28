@@ -1,0 +1,11 @@
+{
+  "name" : "Script Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "id",
+    "tables" : [ "lodr_dev_local.public.scripts" ]
+  }, {
+    "sql" : "script_id",
+    "tables" : [ "lodr_dev_local.public.queries" ]
+  } ]
+}

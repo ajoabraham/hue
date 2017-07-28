@@ -1,0 +1,8 @@
+{
+  "name" : "Schema Error",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "schema_error",
+    "tables" : [ "lodr_dev_local.public.databases", "lodr_dev_local.public.tables" ]
+  } ]
+}

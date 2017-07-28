@@ -1,0 +1,8 @@
+{
+  "name" : "File Type",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "file_type",
+    "tables" : [ "lodr_dev_local.public.source_files" ]
+  } ]
+}

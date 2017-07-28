@@ -1,0 +1,34 @@
+{
+  "name" : "project_users",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "project_users",
+  "rowCount" : 17,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "project_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "user_id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "created_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

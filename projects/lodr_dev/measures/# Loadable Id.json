@@ -1,0 +1,8 @@
+{
+  "name" : "# Loadable Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(loadable_id)",
+    "tables" : [ "lodr_dev_local.public.source_files", "lodr_dev_local.public.zip_files" ]
+  } ]
+}

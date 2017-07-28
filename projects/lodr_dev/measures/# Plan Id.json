@@ -1,0 +1,11 @@
+{
+  "name" : "# Plan Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(plan_id)",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  }, {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.plans" ]
+  } ]
+}

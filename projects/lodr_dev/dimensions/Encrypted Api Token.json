@@ -1,0 +1,8 @@
+{
+  "name" : "Encrypted Api Token",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "encrypted_api_token",
+    "tables" : [ "lodr_dev_local.public.projects" ]
+  } ]
+}

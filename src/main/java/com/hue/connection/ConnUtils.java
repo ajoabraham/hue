@@ -44,7 +44,7 @@ public final class ConnUtils {
 
 			
 	public static Connection getConnection(Datasource datasource) throws ClassNotFoundException, SshException, SQLException, IOException {
-		return getConnection(datasource, true);
+		return getConnection(datasource, datasource.isUseSshTunnel());
 	}
 	
 	private static Connection getConnection(Datasource datasource, boolean enableSsh) throws SshException, SQLException, IOException, ClassNotFoundException {

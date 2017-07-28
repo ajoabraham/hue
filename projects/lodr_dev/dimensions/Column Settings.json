@@ -1,0 +1,8 @@
+{
+  "name" : "Column Settings",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "column_settings",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

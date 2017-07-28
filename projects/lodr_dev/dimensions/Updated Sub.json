@@ -1,0 +1,8 @@
+{
+  "name" : "Updated Sub",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "updated_sub",
+    "tables" : [ "lodr_dev_local.public.queries", "lodr_dev_local.public.load_jobs" ]
+  } ]
+}

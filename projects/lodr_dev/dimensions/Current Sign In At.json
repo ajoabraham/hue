@@ -1,0 +1,8 @@
+{
+  "name" : "Current Sign In At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "current_sign_in_at",
+    "tables" : [ "lodr_dev_local.public.users" ]
+  } ]
+}

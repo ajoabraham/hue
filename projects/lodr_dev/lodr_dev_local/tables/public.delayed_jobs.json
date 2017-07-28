@@ -1,0 +1,69 @@
+{
+  "name" : "delayed_jobs",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "delayed_jobs",
+  "rowCount" : 0,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "handler",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "locked_by",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "locked_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "id",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "PRIMARY_KEY"
+  }, {
+    "name" : "last_error",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "run_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "failed_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "created_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "priority",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "attempts",
+    "desc" : null,
+    "dataType" : "INTEGER",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "queue",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  } ]
+}

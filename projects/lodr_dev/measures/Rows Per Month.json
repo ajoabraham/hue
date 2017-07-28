@@ -1,0 +1,8 @@
+{
+  "name" : "Rows Per Month",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(rows_per_month)",
+    "tables" : [ "lodr_dev_local.public.plans" ]
+  } ]
+}

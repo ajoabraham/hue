@@ -1,0 +1,9 @@
+{
+  "sql" : "users.id = source_files.user_id",
+  "leftTableName" : "users",
+  "rightTableName" : "source_files",
+  "cost" : 500,
+  "allowRollDown" : -1,
+  "cardinalityType" : "ONE_TO_MANY",
+  "joinType" : "INNER_JOIN"
+}

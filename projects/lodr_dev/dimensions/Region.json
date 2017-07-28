@@ -1,0 +1,8 @@
+{
+  "name" : "Region",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "region",
+    "tables" : [ "lodr_dev_local.public.s3_buckets", "lodr_dev_local.public.s3_buckets2" ]
+  } ]
+}

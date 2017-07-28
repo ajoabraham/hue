@@ -1,0 +1,8 @@
+{
+  "name" : "User Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "user_name",
+    "tables" : [ "lodr_dev_local.public.databases" ]
+  } ]
+}

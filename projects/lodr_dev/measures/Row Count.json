@@ -1,0 +1,8 @@
+{
+  "name" : "Row Count",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(row_count)",
+    "tables" : [ "lodr_dev_local.public.tables" ]
+  } ]
+}

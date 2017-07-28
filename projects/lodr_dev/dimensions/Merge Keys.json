@@ -1,0 +1,8 @@
+{
+  "name" : "Merge Keys",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "merge_keys",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

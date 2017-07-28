@@ -1,0 +1,8 @@
+{
+  "name" : "Prefix",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "prefix",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

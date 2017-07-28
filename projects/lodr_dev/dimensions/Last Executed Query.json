@@ -1,0 +1,8 @@
+{
+  "name" : "Last Executed Query",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "last_executed_query",
+    "tables" : [ "lodr_dev_local.public.queries" ]
+  } ]
+}

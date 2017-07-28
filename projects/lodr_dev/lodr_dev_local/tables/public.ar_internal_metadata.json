@@ -1,0 +1,29 @@
+{
+  "name" : "ar_internal_metadata",
+  "desc" : null,
+  "schemaName" : "public",
+  "physicalName" : "ar_internal_metadata",
+  "rowCount" : 1,
+  "tableType" : "DIMENSION",
+  "columns" : [ {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "created_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "value",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
+    "name" : "key",
+    "desc" : null,
+    "dataType" : "TEXT",
+    "keyType" : "PRIMARY_KEY"
+  } ]
+}

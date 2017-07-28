@@ -1,0 +1,11 @@
+{
+  "name" : "# S3 Bucket Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.s3_buckets" ]
+  }, {
+    "sql" : "count(s3_bucket_id)",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

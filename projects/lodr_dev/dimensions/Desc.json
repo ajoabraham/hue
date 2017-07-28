@@ -1,0 +1,8 @@
+{
+  "name" : "Desc",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "desc",
+    "tables" : [ "lodr_dev_local.public.plans" ]
+  } ]
+}

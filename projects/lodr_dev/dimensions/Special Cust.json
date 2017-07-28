@@ -1,0 +1,8 @@
+{
+  "name" : "Special Cust",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "dek_id || id",
+    "tables" : [ "lodr_dev_local.public.s3_buckets", "lodr_dev_local.public.s3_buckets2" ]
+  } ]
+}

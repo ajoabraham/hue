@@ -1,0 +1,8 @@
+{
+  "name" : "Table Size",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(table_size)",
+    "tables" : [ "lodr_dev_local.public.tables" ]
+  } ]
+}

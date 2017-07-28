@@ -1,0 +1,8 @@
+{
+  "name" : "# S3 Buckets2 Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.s3_buckets2" ]
+  } ]
+}

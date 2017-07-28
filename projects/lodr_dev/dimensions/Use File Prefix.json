@@ -1,0 +1,8 @@
+{
+  "name" : "Use File Prefix",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "use_file_prefix",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

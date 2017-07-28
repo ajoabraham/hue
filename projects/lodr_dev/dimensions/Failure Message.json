@@ -1,0 +1,8 @@
+{
+  "name" : "Failure Message",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "failure_message",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

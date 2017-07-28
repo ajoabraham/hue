@@ -8,7 +8,7 @@
   "port" : 5432,
   "postExecCommands" : null,
   "preExecCommands" : null,
-  "userName" : "postgres",
+  "userName" : "ajoabraham",
   "useSshTunnel" : false,
   "sshUserName" : null,
   "sshPassword" : null,

@@ -1,0 +1,11 @@
+{
+  "name" : "# Bucket Loader Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "count(bucket_loader_id)",
+    "tables" : [ "lodr_dev_local.public.loaders", "lodr_dev_local.public.source_files", "lodr_dev_local.public.bucket_load_histories" ]
+  }, {
+    "sql" : "count(id)",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Prep Finished At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "prep_finished_at",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

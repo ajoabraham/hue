@@ -1,0 +1,8 @@
+{
+  "name" : "Folder",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "folder",
+    "tables" : [ "lodr_dev_local.public.scripts" ]
+  } ]
+}

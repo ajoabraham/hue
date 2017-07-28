@@ -1,0 +1,8 @@
+{
+  "name" : "Columns",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(columns)",
+    "tables" : [ "lodr_dev_local.public.source_files" ]
+  } ]
+}

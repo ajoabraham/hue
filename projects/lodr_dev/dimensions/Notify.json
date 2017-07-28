@@ -1,0 +1,8 @@
+{
+  "name" : "Notify",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "notify",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Time Zone",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "time_zone",
+    "tables" : [ "lodr_dev_local.public.projects" ]
+  } ]
+}

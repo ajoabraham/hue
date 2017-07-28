@@ -1,0 +1,8 @@
+{
+  "name" : "Info",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "info",
+    "tables" : [ "lodr_dev_local.public.queries", "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.lj_temp" ]
+  } ]
+}

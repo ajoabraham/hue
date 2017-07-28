@@ -1,0 +1,8 @@
+{
+  "name" : "File Filter",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "file_filter",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

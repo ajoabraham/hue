@@ -1,0 +1,8 @@
+{
+  "name" : "Table Indexes",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "table_indexes",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

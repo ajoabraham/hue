@@ -25,4 +25,10 @@ public class Expressible extends HueBase {
 	public Set<FieldExpression> getExpressions(){
 		return expressions;
 	}
+	
+	public Optional<FieldExpression> getExpression(Table t) {
+		return getExpressions().stream()
+			.filter(fe -> fe.hasTable(t))
+			.findFirst();
+	}
 }

@@ -1,0 +1,8 @@
+{
+  "name" : "Failed Files",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(failed_files)",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

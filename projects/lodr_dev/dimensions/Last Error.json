@@ -1,0 +1,8 @@
+{
+  "name" : "Last Error",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "last_error",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

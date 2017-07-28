@@ -1,0 +1,8 @@
+{
+  "name" : "Version",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "version",
+    "tables" : [ "lodr_dev_local.public.schema_migrations" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Locked By",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "locked_by",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

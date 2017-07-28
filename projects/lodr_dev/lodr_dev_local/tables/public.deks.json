@@ -1,27 +1,32 @@
 {
-  "name" : "users",
+  "name" : "deks",
   "desc" : null,
-  "schemaName" : null,
-  "physicalName" : "users",
-  "rowCount" : 1000,
+  "schemaName" : "public",
+  "physicalName" : "deks",
+  "rowCount" : 1,
   "tableType" : "DIMENSION",
   "columns" : [ {
+    "name" : "updated_at",
+    "desc" : null,
+    "dataType" : "TIMESTAMP",
+    "keyType" : "NO_KEY_TYPE"
+  }, {
     "name" : "id",
     "desc" : null,
     "dataType" : "INTEGER",
     "keyType" : "PRIMARY_KEY"
   }, {
-    "name" : "email",
+    "name" : "created_at",
     "desc" : null,
-    "dataType" : "TEXT",
+    "dataType" : "TIMESTAMP",
     "keyType" : "NO_KEY_TYPE"
   }, {
-    "name" : "first_name",
+    "name" : "primary",
     "desc" : null,
-    "dataType" : "TEXT",
+    "dataType" : "BOOLEAN",
     "keyType" : "NO_KEY_TYPE"
-  },{
-    "name" : "last_name",
+  }, {
+    "name" : "key",
     "desc" : null,
     "dataType" : "TEXT",
     "keyType" : "NO_KEY_TYPE"

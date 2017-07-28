@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.hue.model.Datasource;
 import com.hue.model.FieldExpression;
 import com.hue.model.Table;
+import com.hue.utils.CommonUtils;
 
 public class FieldExpSerDe{
 	private FieldExpSerDe() {};
@@ -32,13 +33,16 @@ public class FieldExpSerDe{
 		    gen.writeArrayFieldStart("tables");
 		    
 		    fe.getTables().stream().forEach(t -> { 
-		    		String n = t.getDatasource().getName() + "." +
-		    			String.join(".", t.getPhysicalNameSegments());
-		    			try {
-						gen.writeString(n);
-					} catch (IOException e) {
-						new RuntimeException("Could not write out expression tables for " + fe.getSql() + ". \n" + e.getMessage());
-					}
+		    		String n = t.getDatasource().getName() + ".";
+		    		if(!CommonUtils.isBlank(t.getSchemaName())) n = n + t.getSchemaName() + ".";
+		    		
+		    		n = n + t.getName();
+		    		
+	    			try {
+					gen.writeString(n);
+				} catch (IOException e) {
+					new RuntimeException("Could not write out expression tables for " + fe.getSql() + ". \n" + e.getMessage());
+				}
 		    });
 		    
 		    gen.writeEndArray();

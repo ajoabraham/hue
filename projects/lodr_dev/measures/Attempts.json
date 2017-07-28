@@ -1,0 +1,8 @@
+{
+  "name" : "Attempts",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(attempts)",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

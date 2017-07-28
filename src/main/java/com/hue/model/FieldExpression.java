@@ -59,4 +59,16 @@ public class FieldExpression {
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		return sql+":"+tables.toString();
+	}
+
+	public boolean hasTable(Table t) {
+		return getTables()
+					.stream()
+					.filter(tt -> tt.equals(t))
+					.findFirst()
+					.isPresent();
+	}
 }

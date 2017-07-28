@@ -1,6 +1,7 @@
 package com.hue.model.persist;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
@@ -58,9 +59,10 @@ public class JoinSerDe{
 		    String[] l = left.split(".");
 		    Table leftTbl;
 		    if(l.length > 1) {
-		    		leftTbl = s.getTable(ds, l[l.length-1], l[l.length-2]).get();
+		    		leftTbl = checkAndGetTable(s, ds, l[l.length-2], l[l.length-1]);
 		    }else {
-		    		leftTbl = s.getTable(ds, left).get();
+		    		
+		    		leftTbl = checkAndGetTable(s, ds, null, left);;
 		    }
 		    
 		    check(node,"rightTableName");
@@ -68,9 +70,9 @@ public class JoinSerDe{
 		    String[] r = right.split(".");
 		    Table rightTbl;
 		    if(r.length > 1) {
-		    		rightTbl = s.getTable(ds, r[r.length-1], r[r.length-2]).get();
+		    		rightTbl = checkAndGetTable(s, ds, r[r.length-2], r[r.length-1]);
 		    }else {
-		    		rightTbl = s.getTable(ds, right).get();
+		    		rightTbl = checkAndGetTable(s, ds, null, right);
 		    }
 		    
 		    check(node,"sql");
@@ -107,6 +109,24 @@ public class JoinSerDe{
     				throw new IOException("required property " +field + " not found");
 			}
 	    }
+		
+		private Table checkAndGetTable(Schema s, Datasource ds, String schemaName, String tableName) throws IOException {
+			if(schemaName == null) {
+				Optional<Table> tbl = s.getTable(ds, tableName);
+				if(tbl.isPresent()) {
+					return tbl.get();
+				}else {
+					throw new IOException(tableName + " not found in datasource " + ds.getName());
+				}
+			}else {
+				Optional<Table> tbl = s.getTable(ds, tableName, schemaName);
+				if(tbl.isPresent()) {
+					return tbl.get();
+				}else {
+					throw new IOException(tableName + " not found in datasource " + ds.getName() + " for schema " + schemaName);
+				}
+			}
+		}
 		
 	}
 }

@@ -1,0 +1,8 @@
+{
+  "name" : "Failed At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "failed_at",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

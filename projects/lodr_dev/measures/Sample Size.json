@@ -1,0 +1,8 @@
+{
+  "name" : "Sample Size",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(sample_size)",
+    "tables" : [ "lodr_dev_local.public.source_files" ]
+  } ]
+}

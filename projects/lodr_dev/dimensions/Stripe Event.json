@@ -1,0 +1,8 @@
+{
+  "name" : "Stripe Event",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "stripe_event",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  } ]
+}

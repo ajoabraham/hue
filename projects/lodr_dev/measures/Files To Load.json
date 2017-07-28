@@ -1,0 +1,8 @@
+{
+  "name" : "Files To Load",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(files_to_load)",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

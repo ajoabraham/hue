@@ -1,0 +1,8 @@
+{
+  "name" : "Volume Processed",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(volume_processed)",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

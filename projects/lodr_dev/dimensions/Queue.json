@@ -1,0 +1,8 @@
+{
+  "name" : "Queue",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "queue",
+    "tables" : [ "lodr_dev_local.public.delayed_jobs" ]
+  } ]
+}

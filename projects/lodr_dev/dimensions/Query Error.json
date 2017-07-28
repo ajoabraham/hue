@@ -1,0 +1,8 @@
+{
+  "name" : "Query Error",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "query_error",
+    "tables" : [ "lodr_dev_local.public.queries" ]
+  } ]
+}

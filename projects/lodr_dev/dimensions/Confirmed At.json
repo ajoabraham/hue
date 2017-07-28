@@ -1,0 +1,8 @@
+{
+  "name" : "Confirmed At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "confirmed_at",
+    "tables" : [ "lodr_dev_local.public.users" ]
+  } ]
+}

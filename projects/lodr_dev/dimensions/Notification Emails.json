@@ -1,0 +1,8 @@
+{
+  "name" : "Notification Emails",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "notification_emails",
+    "tables" : [ "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}

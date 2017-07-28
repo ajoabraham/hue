@@ -1,0 +1,8 @@
+{
+  "name" : "Created At",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "created_at",
+    "tables" : [ "lodr_dev_local.public.projects", "lodr_dev_local.public.users", "lodr_dev_local.public.loaders", "lodr_dev_local.public.source_files", "lodr_dev_local.public.deks", "lodr_dev_local.public.s3_buckets", "lodr_dev_local.public.samples", "lodr_dev_local.public.scripts", "lodr_dev_local.public.delayed_jobs", "lodr_dev_local.public.bucket_load_histories", "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.loader_sources", "lodr_dev_local.public.plans", "lodr_dev_local.public.lj_temp", "lodr_dev_local.public.project_users", "lodr_dev_local.public.queries", "lodr_dev_local.public.ar_internal_metadata", "lodr_dev_local.public.subscriptions", "lodr_dev_local.public.s3_buckets2", "lodr_dev_local.public.zip_files", "lodr_dev_local.public.bucket_loaders", "lodr_dev_local.public.databases", "lodr_dev_local.public.tables" ]
+  } ]
+}

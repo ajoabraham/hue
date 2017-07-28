@@ -1,0 +1,8 @@
+{
+  "name" : "Confirmation Token",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "confirmation_token",
+    "tables" : [ "lodr_dev_local.public.users" ]
+  } ]
+}

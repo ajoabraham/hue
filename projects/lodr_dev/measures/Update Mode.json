@@ -1,0 +1,8 @@
+{
+  "name" : "Update Mode",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(update_mode)",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

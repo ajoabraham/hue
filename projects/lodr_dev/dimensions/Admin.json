@@ -1,0 +1,8 @@
+{
+  "name" : "Admin",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "admin",
+    "tables" : [ "lodr_dev_local.public.users" ]
+  } ]
+}

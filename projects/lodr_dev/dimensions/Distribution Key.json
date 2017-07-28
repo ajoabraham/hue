@@ -1,0 +1,8 @@
+{
+  "name" : "Distribution Key",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "distribution_key",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

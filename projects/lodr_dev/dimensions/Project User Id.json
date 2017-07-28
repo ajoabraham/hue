@@ -1,0 +1,8 @@
+{
+  "name" : "Project User Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "id",
+    "tables" : [ "lodr_dev_local.public.project_users" ]
+  } ]
+}

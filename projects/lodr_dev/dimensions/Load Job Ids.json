@@ -1,0 +1,8 @@
+{
+  "name" : "Load Job Ids",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "load_job_ids",
+    "tables" : [ "lodr_dev_local.public.bucket_load_histories" ]
+  } ]
+}

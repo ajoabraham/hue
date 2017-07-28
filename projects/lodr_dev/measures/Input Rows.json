@@ -1,0 +1,8 @@
+{
+  "name" : "Input Rows",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(input_rows)",
+    "tables" : [ "lodr_dev_local.public.load_jobs", "lodr_dev_local.public.lj_temp" ]
+  } ]
+}

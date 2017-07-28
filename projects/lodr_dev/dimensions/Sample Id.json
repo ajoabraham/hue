@@ -1,0 +1,8 @@
+{
+  "name" : "Sample Id",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "id",
+    "tables" : [ "lodr_dev_local.public.samples" ]
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "Amount",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(amount)",
+    "tables" : [ "lodr_dev_local.public.plans" ]
+  } ]
+}

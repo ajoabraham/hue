@@ -1,0 +1,8 @@
+{
+  "name" : "Schema",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "schema",
+    "tables" : [ "lodr_dev_local.public.tables" ]
+  } ]
+}

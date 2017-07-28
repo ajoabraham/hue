@@ -1,0 +1,8 @@
+{
+  "name" : "View Def",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "view_def",
+    "tables" : [ "lodr_dev_local.public.tables" ]
+  } ]
+}

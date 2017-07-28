@@ -1,0 +1,8 @@
+{
+  "name" : "Target Table Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "target_table_name",
+    "tables" : [ "lodr_dev_local.public.loaders" ]
+  } ]
+}

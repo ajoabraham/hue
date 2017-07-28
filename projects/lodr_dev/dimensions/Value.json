@@ -1,0 +1,8 @@
+{
+  "name" : "Value",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "value",
+    "tables" : [ "lodr_dev_local.public.ar_internal_metadata" ]
+  } ]
+}

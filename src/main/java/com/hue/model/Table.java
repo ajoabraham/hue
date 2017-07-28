@@ -1,14 +1,18 @@
 package com.hue.model;
 
-import com.fasterxml.jackson.annotation.*;
-import com.google.common.collect.Lists;
-import com.hue.common.ColumnKeyType;
-import com.hue.common.TableType;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+
+import org.apache.tinkerpop.gremlin.structure.Vertex;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+import com.hue.common.ColumnKeyType;
+import com.hue.common.TableType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Table extends HueBase implements IJoinable {
@@ -21,8 +25,11 @@ public class Table extends HueBase implements IJoinable {
 	
     @JsonIgnore
 	private Datasource datasource;
-	private List<Column> columns = new ArrayList<Column>();
-
+	private Set<Column> columns = Sets.newHashSet();
+	
+	@JsonIgnore
+	public Vertex v;
+	
 	public Table() {}
 	public Table(Datasource ds, String schema, String name, TableType type, int rowCount) {
 		setDatasource(ds);
@@ -75,11 +82,11 @@ public class Table extends HueBase implements IJoinable {
 		this.tableType = tableType;
 	}
 
-	public void setColumns(List<Column> columns) {
+	public void setColumns(Set<Column> columns) {
 		this.columns = columns;
 	}
 	
-	public List<Column> getColumns() {
+	public Set<Column> getColumns() {
 		return columns;
 	}
 
@@ -104,10 +111,10 @@ public class Table extends HueBase implements IJoinable {
 		return table;
 	}
 
-    private List<Column> getKeys(ColumnKeyType keyType) {
+    public List<Column> getKeys(ColumnKeyType keyType) {
         List<Column> l = Lists.newArrayList();
         for(int i=0;i<getColumns().size();i++){
-            Column c = getColumns().get(i);
+            Column c = getColumns().toArray(new Column[l.size()])[i];
             if(keyType.equals(c.getKeyType())) {
                 l.add(c);
             }
@@ -161,5 +168,8 @@ public class Table extends HueBase implements IJoinable {
 		return Arrays.asList(getSchemaName(), getPhysicalName());
 	}
     
-    
+    @Override
+    public String toString() {
+    		return String.join(".", getPhysicalNameSegments());
+    }
 }

@@ -1,8 +1,0 @@
-{
-  "name" : "User Full Name",
-  "desc" : null,
-  "expressions" : [ {
-    "sql" : "first_name || last_name",
-    "tables" : [ "lodr_dev_local.users" ]
-  } ]
-}

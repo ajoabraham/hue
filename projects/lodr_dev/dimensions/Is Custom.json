@@ -1,0 +1,8 @@
+{
+  "name" : "Is Custom",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "is_custom",
+    "tables" : [ "lodr_dev_local.public.subscriptions" ]
+  } ]
+}

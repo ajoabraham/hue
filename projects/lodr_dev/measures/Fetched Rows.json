@@ -1,0 +1,8 @@
+{
+  "name" : "Fetched Rows",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "sum(fetched_rows)",
+    "tables" : [ "lodr_dev_local.public.queries" ]
+  } ]
+}

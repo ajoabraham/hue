@@ -1,0 +1,8 @@
+{
+  "name" : "Loader Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "loader_name",
+    "tables" : [ "lodr_dev_local.public.load_jobs" ]
+  } ]
+}

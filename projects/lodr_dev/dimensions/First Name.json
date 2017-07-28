@@ -1,0 +1,8 @@
+{
+  "name" : "First Name",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "first_name",
+    "tables" : [ "lodr_dev_local.public.users" ]
+  } ]
+}

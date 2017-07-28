@@ -1,0 +1,8 @@
+{
+  "name" : "Schedule",
+  "desc" : null,
+  "expressions" : [ {
+    "sql" : "schedule",
+    "tables" : [ "lodr_dev_local.public.loaders", "lodr_dev_local.public.bucket_loaders" ]
+  } ]
+}
