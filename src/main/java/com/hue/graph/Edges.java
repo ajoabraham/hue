@@ -5,7 +5,8 @@ public enum Edges {
 	HAS_EXPRESSION("has_expression"),
 	HAS_VIRTUAL_EXPRESSION("has_virtual_expression"),
 	QUERIES_FROM("queries_from"),
-	JOINS("joins");
+	JOINS("joins"),
+    COMPOSED_OF("composed_of");
 
 	private String name = null;
 	

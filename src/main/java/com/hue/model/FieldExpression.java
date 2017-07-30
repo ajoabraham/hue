@@ -42,6 +42,11 @@ public class FieldExpression implements Graphable{
 		this.v = v;		
 	}
 	
+	@Override
+	public String getName() {
+		return this.toString();
+	}
+	
 	public Set<Table> getTables() {
 		return tables;
 	}

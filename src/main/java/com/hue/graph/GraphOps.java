@@ -1,6 +1,7 @@
 package com.hue.graph;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -12,6 +13,9 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.hue.model.Expressible;
+import com.hue.model.Join;
+import com.hue.model.Table;
 import com.hue.model.persist.Schema;
 
 public class GraphOps {
@@ -111,82 +115,93 @@ public class GraphOps {
 		}
 	}
 
-//	@SuppressWarnings({ "unchecked", "rawtypes" })
-//	public static List<Path> qeGetSecondaryPaths(Schema schema, List<Table> targetRoots, List<Expressible> expressible)
-//			throws GraphException {
-//		Set<Graphable> tgtSet = Sets.newHashSet(expressible);
-//
-//		ArrayList<Path> paths = Lists.newArrayList();
-//		try {
-//			for (Graphable vb : tgtSet) {
-//				List<List> res = Lists.newArrayList();
-//				res = new GremlinPipeline<Vertex, Vertex>(vb.v()).out(Edges.HAS_EXPRESSION.getName())
-//						.out(Edges.QUERIES_FROM.getName()).has("label", "table").path().toList();
-//
-//				for (List<Vertex> innerPath : res) {
-//					Path path = new Path();
-//					for (int j = 1; j < innerPath.size(); j++) {
-//						Vertex v = innerPath.get(j);
-//						path.add((Graphable) v.property("object").value());
-//					}
-//					paths.add(path);
-//				}
-//			}
-//			List<Graphable> end = paths.stream().map(Path::endNode).collect(Collectors.toList());
-//
-//			String tableList = targetRoots.stream().map((n) -> "'" + n.getName() + "'").collect(
-//					Collectors.joining(","));
-//			for (Graphable start : end) {
-//				Pipe<Vertex, ?> pipe = Gremlin.compile(
-//						"_().sideEffect{x=it}.out('joins').dedup().out('joins').filter{it.allow_roll_down!=0}"
-//								+ ".dedup().filter{x!=it}.loop(6){it.loops < 150}{true}.has('label','table')"
-//								+ ".filter{[" + tableList + "].contains(it.name)}.path");
-//
-//				pipe.setStarts(new SingleIterator<Vertex>(start.v()));
-//				for (Object o : pipe) {
-//					ArrayList<Vertex> pathy = (ArrayList<Vertex>) o;
-//					Path path = new Path();
-//					boolean skipPath = false;
-//					for (int j = 0; j < pathy.size(); j++) {
-//						Vertex v = pathy.get(j);
-//						Graphable gv = (Graphable) v.property("object");
-//
-//						// doing this because the filter above
-//						// .filter{it.allow_roll_down!=0} is not working
-//						if (gv instanceof Join) {
-//							Join je = (Join) gv;
-//							if (je.getAllowRollDown() == 0) {
-//								skipPath = true;
-//								break;
-//							}
-//						}
-//						path.add(gv);
-//					}
-//
-//					// skipping paths with any disallowed roll downs
-//					if (!skipPath) {
-//						for (int x = 0; x < paths.size(); x++) {
-//							Path basePath = paths.get(x);
-//							if (basePath.endNode().equals(path.startNode())) {
-//								paths.add(basePath.append(path));
-//							}
-//						}
-//					}
-//				}
-//
-//			}
-//			Iterator<Path> it = paths.iterator();
-//			while (it.hasNext()) {
-//				Path ipath = it.next();
-//				if (!targetRoots.contains(ipath.endNode()))
-//					it.remove();
-//			}
-//			return paths;
-//		}
-//		catch (Exception e) {
-//			throw new GraphException(e.getMessage());
-//		}
-//	}
+	public static List<Path> qeGetSecondaryPaths(Schema schema, List<Table> targetRoots, List<Expressible> expressible)
+			throws GraphException {
+		Set<Graphable> tgtSet = Sets.newHashSet(expressible);
+
+		ArrayList<Path> paths = Lists.newArrayList();
+		try {
+			for (Graphable vb : tgtSet) {				
+				List<org.apache.tinkerpop.gremlin.process.traversal.Path> res = Lists.newArrayList();
+				GraphTraversalSource g = schema.getGraph().traversal();
+				res = g.V(vb.v().id())
+						.out(Edges.HAS_EXPRESSION.getName())
+						.out(Edges.QUERIES_FROM.getName())
+						.hasLabel("table")
+						.path().toList();
+
+				for (org.apache.tinkerpop.gremlin.process.traversal.Path innerPath : res) {
+					Path path = new Path();
+					for (int j = 1; j < innerPath.size(); j++) {
+						Vertex v = innerPath.get(j);
+						path.add((Graphable) v.property("object").value());
+					}
+					paths.add(path);
+				}
+			}
+			List<Graphable> end = paths.stream().map(Path::endNode)					
+					.collect(Collectors.toList());
+
+			List<String> tableList = paths.stream().map(Path::endNode)
+				.map(Graphable::getName)
+				.collect(Collectors.toList());
+			
+			for (Graphable start : end) {
+				
+				GraphTraversalSource g = schema.getGraph().traversal();
+				List<org.apache.tinkerpop.gremlin.process.traversal.Path> res = 
+						g.V(start.v().id())
+						.out("joins")
+						.has("allow_roll_down", 1)
+						.or().has("allow_roll_down", -1)
+						.out("joins")
+						.hasLabel("table")
+						.filter(tv -> tableList.contains(((Graphable) tv.get().property("object").value()).getName()))
+						.path().toList();
+				
+				for (org.apache.tinkerpop.gremlin.process.traversal.Path o : res) {
+					Path path = new Path();
+					boolean skipPath = false;
+					for (int j = 0; j < o.size(); j++) {
+						Vertex v = o.get(j);
+						Graphable gv = (Graphable) v.property("object");
+
+						// doing this because the filter above
+						// .filter{it.allow_roll_down!=0} is not working
+						if (gv instanceof Join) {
+							Join je = (Join) gv;
+							if (je.getAllowRollDown() == 0) {
+								skipPath = true;
+								break;
+							}
+						}
+						path.add(gv);
+					}
+
+					// skipping paths with any disallowed roll downs
+					if (!skipPath) {
+						for (int x = 0; x < paths.size(); x++) {
+							Path basePath = paths.get(x);
+							if (basePath.endNode().equals(path.startNode())) {
+								paths.add(basePath.append(path));
+							}
+						}
+					}
+				}
+
+			}
+			Iterator<Path> it = paths.iterator();
+			while (it.hasNext()) {
+				Path ipath = it.next();
+				if (!targetRoots.contains(ipath.endNode()))
+					it.remove();
+			}
+			return paths;
+		}
+		catch (Exception e) {
+			throw new GraphException(e.getMessage());
+		}
+	}
 	
 	public static ArrayList<Path> qeGetAllBasePaths(Schema schema) throws GraphException {
 		ArrayList<Path> paths = GraphOps.qeGetBasePaths(schema, schema.getDimensions().toArray(new Graphable[schema.getDimensions().size()]));
